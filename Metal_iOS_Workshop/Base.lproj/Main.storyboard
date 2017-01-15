@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Metal_iOS_Workshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mje-El-FNl">
+                                <rect key="frame" x="16" y="20" width="343" height="286.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NIY-Bu-UPA">
+                                <rect key="frame" x="16" y="316.5" width="343" height="286.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xpb-Zx-K63">
+                                <rect key="frame" x="14" y="618" width="347" height="31"/>
+                                <color key="tintColor" red="0.1647058824" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="WJj-TL-05P"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xpb-Zx-K63" secondAttribute="trailing" constant="16" id="9sF-py-DQ5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NIY-Bu-UPA" secondAttribute="leading" id="9sb-Za-LNY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Mje-El-FNl" secondAttribute="leading" id="PmY-Gz-771"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mje-El-FNl" secondAttribute="trailing" id="ZlR-YA-PfU"/>
+                            <constraint firstItem="NIY-Bu-UPA" firstAttribute="height" secondItem="Mje-El-FNl" secondAttribute="height" id="jnY-qF-bpt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NIY-Bu-UPA" secondAttribute="trailing" id="jyy-Qe-s03"/>
+                            <constraint firstItem="Mje-El-FNl" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="oLB-Jt-iB1"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xpb-Zx-K63" secondAttribute="bottom" constant="19" id="uVJ-tQ-lob"/>
+                            <constraint firstItem="xpb-Zx-K63" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="yfD-gO-KPE"/>
+                            <constraint firstItem="NIY-Bu-UPA" firstAttribute="top" secondItem="Mje-El-FNl" secondAttribute="bottom" constant="10" id="yuc-mh-Vzv"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="NIY-Bu-UPA" secondAttribute="bottom" constant="64" id="zUH-or-Eov"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="bottomImageView" destination="NIY-Bu-UPA" id="KxY-Ip-6RW"/>
+                        <outlet property="topImageView" destination="Mje-El-FNl" id="T9y-ff-fZl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738.39999999999998" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>
